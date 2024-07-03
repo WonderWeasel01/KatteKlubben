@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opret Kat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form action="#" th:action="@{/opretKat}" th:object="${cat}" method="post" >
+    <div class="katNavnLabel">Kat navn</div>
+    <input type="text" id="katNavnLabel" th:field="*{name}" class="Input"></input>
+    <div class="catRaceLabel">Race</div>
+    <input type="text" id="catRaceLabel" th:field="*{race}" class="Input"></input>
+    <div class="catAgeLabel">Alder</div>
+    <input type="text" id="catAgeLabel" th:field="*{age}" class="Input"></input>
+    <div class="catGenderDropdown">Køn</div>
+    <select id="catGenderDropdown" name="genderSelect" th:field="*{gender}">
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+    </select>
+    <div class="catWeightLabel">Vægt</div>
+    <input type="text" id="catWeightLabel" th:field="*{weight}" class="Input"></input>
+    <div class="NextButton">
+        <button type="submit">Opret Kat</button>
+    </div>
+    <div th:if="${errorMessage}" class="emailUsedError" role="alert">
+        <span th:text="${errorMessage}"></span>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/CSS/landing.css">
+    <script src="https://kit.fontawesome.com/c0582023bf.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header>
+    <div class="header-frame">
+        <a th:href="@{/landing}">
+            <img class="logo" src="/Images/Logo.png" />
+
+            
+        </a>
+        <a href="dinBruger">
+            <div class="MinProfilButton">
+                <span class="MinProfilText">MIN PROFIL</span>
+            </div>
+        </a>
+    </div>
+</header>
+<body class="body">
+    <div class="Container">
+        <div class="MedlemmerPost">No post yet</div>
+        <div class="Medlemmertab">
+            <div class="catsAndUserRow">
+                <div class="userLabel">MEDLEMMER</div>
+            
+            </div>
+            <div class="searchInput">
+                <input class="searchStyle" type="text" id="searchInput" placeholder="Søg efter ejer.." oninput="searchUser()">
+            </div>
+            <ul>
+                <div class="Medlembox" th:each="user : ${users}">
+                    <img class="Image1" src="https://via.placeholder.com/62x62"/>
+                    <div class="Nameandpet">
+                        <a th:href="@{'/otherUser/' + ${user.id}}">
+                        <div class="Navn"  th:text="${user.firstName + ' ' + user.lastName}"></div>
+                        </a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        function searchUser() {
+            // Get the input value
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var usernames = document.getElementsByClassName('Navn');
+
+            // Loop through all usernames
+            for (var i = 0; i < usernames.length; i++) {
+                var username = usernames[i].textContent.toLowerCase();
+                var parentElement = usernames[i].closest('.Medlembox');
+
+                // Show or hide the user box based on the search input
+                if (username.includes(input)) {
+                    parentElement.style.display = 'block';
+                } else {
+                    parentElement.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

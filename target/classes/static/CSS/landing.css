@@ -1,0 +1,214 @@
+.body{
+    background: #E5EBF0;
+
+
+}
+.header-frame {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    row-gap: 20px;
+    margin-bottom: 30px;
+}
+
+.MinProfilButton {
+    width: 220px;
+    height: 50px;
+    background: rgba(46,42,116,1);
+    padding: 10px 10px;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+  }
+
+  .MinProfilText {
+    width: 100%;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    font-family: Inter;
+    font-weight: Regular;
+    font-weight:900;
+    font-size: 25px;
+    opacity: 1;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+  }
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    
+}
+
+.logo {
+    height: 73px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.Container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.MedlemmerPost{
+    width: 70%;
+    flex-direction: column;
+}
+
+.Medlemmertab {
+    flex-direction: column;
+    width: 30%;
+    height: 700px;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+    gap: 10px;
+    display: block;
+    overflow-y: scroll; 
+}
+
+.userLabel{
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-family: Inter;
+    font-weight: 700;
+    padding-bottom: 50px;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.catLabel{
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-family: Inter;
+    font-weight: 700;
+    padding-bottom: 50px;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.fa-magnifying-glass{
+    width: 224px;
+    height: 224px;
+}
+
+.catLabel.userLabel:hover{
+    color: #FC300D;
+   
+}
+
+.catsAndUserRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.searchInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.searchStyle{
+    border: none;
+    border-bottom: 2px solid #2E2A74;
+    width: 200px;
+    height: 30px;
+    font-size: x-large;
+    text-align: center;
+}
+
+.Medlembox{
+    width: 263px;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background: white;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+}
+
+.Image1{
+    width: 62px;
+    height: 62px;
+}
+
+.Nameandpet{
+    width: 172px;
+    height: 60px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background: white;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: inline-flex;
+}
+
+.Navn{
+    width: auto;
+    height: 33px;
+    color: black;
+    font-size: 25px;
+    font-family: Inter;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.AntalPets{
+    color: black;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+
+
+ @media  (max-width: 768px){
+    .Medlemmertab{
+        display: none;
+    }
+
+    .MedlemmerPost{
+        width: 50%;
+    }
+
+    .MinProfilButton{
+        display: none;
+    }
+    
+ }

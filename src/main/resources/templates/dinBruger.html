@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/dinBruger.css">
+       <script src="js/script.js"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+</html>
+<header>
+    <div class="header-frame">
+        <a th:href="@{/landing}">
+            <img class="logo" src="/Images/Logo.png" />
+        </a>
+        <a href="dinBruger">
+            <div class="MinProfilButton">
+                <span class="MinProfilText">MIN PROFIL</span>
+            </div>
+            </a>
+    </div>
+</header>
+
+<div class="MinProfil">
+    <div class="Cover">
+      <div class="Coverbox">
+        <div class="Changecoverbox">
+          <div class="Changecoverbutton">
+            <div class="ChangeCover">Change Cover</div>
+          </div>
+        </div>
+        <div class="Nameandimage">
+          <div class="Profileimage">
+            <img class="Profileimagefile" src="https://via.placeholder.com/62x62"/>
+          </div>
+          <div class="Nameandantal">
+              <div class="Firstname"> <span th:text="${user.firstName}"></span> <span th:text="${user.lastName}"></span><div>
+            <div class="Antalani">
+                <div class="AntalKLedyr">Antal Kæledyr: </div>
+              <div class="Tal"><span class="Tal" th:text="${catCount}"></span></div>
+            </div>
+          </div>
+        </div>
+              <div class="EditUserInfo"><a th:href="@{/editUserInfo/{id}(id=${user.id})}">Edit info</a> </div>
+              <div class="DeleteAccount"><a th:href="@{/deleteAccount/{id}(id=${user.id})}" onclick="return confirm('Er du sikker på, at du vil slette din konto?');">Delete account</a>
+              </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+
+    <div class="Dinedyr">
+      <div class="DineKLedyr">DINE KÆLEDYR</div>
+
+        <div th:if="${error}" class="error">
+            <p th:text="${error}"></p>
+        </div>
+            <div th:each="cat : ${cats}" class="Katteblock">
+                <div class="Imageandname">
+                    <div class="Katteimage"></div>
+                    <div class="Navn" th:text="${cat.name}">*navn*</div>
+                </div>
+
+                <div class="Alderograce">
+                    <div class="Alderblock">
+                        <div class="Alder">Alder:</div>
+                        <div class="Alder" th:text="${cat.age}">*alder*</div>
+                    </div>
+                    <div class="Raceblock">
+                        <div class="Race">Race:</div>
+                        <div class="Race" th:text="${cat.race}">*race*</div>
+                    </div>
+                </div>
+
+                <div class="Koenogvaegt">
+
+                    <div class="Koen">
+                        <div class="KN">Køn:</div>
+                        <div class="KN" th:text="${cat.gender}">*køn*</div>
+                    </div>
+
+                    <div class="Vaegt">
+                        <div class="VGt">Vægt:</div>
+                        <div class="VGt" th:text="${cat.weight}">*vægt*</div>
+                        <div class="VGt">kg</div>
+                    </div>
+                </div>
+
+                  <div class="EditDeleteButtons">
+                    <div class="EditCatInfo"><a th:href="@{/editCatInfo/{id}(id=${cat.id})}">Edit info</a></div>
+                      <div class="DeleteCatButton"><a th:href="@{/deleteCat/{id}(id=${cat.id})}" onclick="return confirm('Er du sikker på, at du vil slette denne kat?');">Delete</a></div>   
+                  </div>
+                
+            </div>
+    </div>
+</div>
+    <div id="sticky-button"><a th:href="opretKat">Tilføj Kæledyr</a></div>
+</html>

@@ -1,0 +1,196 @@
+body {
+    background-color: #E5EBF0;
+    font-family: 'Inter', sans-serif;
+    gap: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-frame {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.logo {
+    height: 73px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.nav-link2{
+    text-decoration: none;
+    color: black;
+    color: black;
+    font-weight: 700;
+}
+
+.welcome-section {
+    background: url('/Images/CatBackground.jpg');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 100px 10px;
+    align-content: center;
+    gap: 6rem;
+    display: grid;
+}
+.welcome-text {
+    font-size: 2.5rem;
+    display: flex;
+    flex-flow: column;
+    gap: 0.5em;
+}
+.welcome-title, .welcome-subtitle {
+    font-weight: 700;
+}
+
+.welcome-title {
+    font-size: 1.5em;
+}
+
+.welcome-subtitle {
+    font-weight: 400;
+}
+
+.button.red-button {
+    background-color: #2E2A74;
+    border-radius: 10px;
+    color: white;
+    padding: 23px 37px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.info-block {
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    padding: 40px;
+    width: 600px;
+}
+
+.info-title {
+    color: #2E2A74;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.info-image {
+    width: 668px;
+    height: 499px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.features-section {
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    text-align: center;
+    padding: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-title {
+    color: #2E2A74;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+.feature-item {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.feature-title {
+    color: #2E2A75;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.feature-description {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.DefaultButton{
+    color: white;
+    background-color: #2E2A75;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+}
+
+.DefaultButtonBorder{
+    color: #2E2A75;
+    background-color: white;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    border: #2E2A75 solid 2px;
+}
+
+.DefaultButton:hover {
+    background-color: #24206f;
+  }
+
+  

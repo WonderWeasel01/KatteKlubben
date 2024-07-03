@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Cat Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <form action="#" th:action="@{/editCatInfo}" th:object="${cat}" method="post">
+        <input type="hidden" th:field="*{id}" class="input">
+
+        <div class="label">Navn:</div>
+        <input type="text" th:field="*{name}" class="input">
+
+        <div class="label">Race:</div>
+        <input type="text" th:field="*{race}" class="input">
+
+        <div class="label">Alder:</div>
+        <input type="number" th:field="*{age}" class="input">
+
+        <div class="label">Køn:</div>
+        <select th:field="*{gender}" class="input">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+
+        <div class="label">Vægt (kg):</div>
+        <input type="text" th:field="*{weight}" class="input">
+
+        <div class="updateButton">
+            <button type="submit">Opdater information</button>
+        </div>
+    </form>
+</body>
+</html>

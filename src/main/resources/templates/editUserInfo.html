@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form action="#" th:action="@{/editUserInfo}" th:object="${user}" method="post">
+    <input type="hidden" th:field="*{id}" class="Input">
+
+    <div class="userFirstName">Nyt Fornavn:</div>
+    <input type="text" id="userFirstName" th:value="firstName" th:field="*{firstName}" class="Input"></input>
+    <div class="userLastName">Nyt Efternavn:</div>
+    <input type="text" id="userLastName" th:value="lastName" th:field="*{lastName}" class="Input"></input>
+    <div class="email">Ny email:</div>
+    <input type="text" id="email" th:value="email" th:field="*{email}" class="Input"></input>
+    <div class="password">Nyt password:</div>
+    <input type="password" id="password" th:field="*{password}" class="Input"></input>
+
+    <div class="updateButton">
+        <button type="submit">Opdater information</button>
+    </div>
+</form>
+</body>
+</html>

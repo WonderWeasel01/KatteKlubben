@@ -1,0 +1,149 @@
+body {
+    background-color: #E5EBF0;
+    margin: 0; /* Reset default body margin */
+    font-family: Arial, sans-serif; /* Use a common font */
+}
+
+.header-frame {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.MinProfilButton {
+    width: 220px;
+    height: 50px;
+    background: rgba(46, 42, 116, 1);
+    padding: 10px 10px;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.MinProfilText {
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-weight: 900;
+    font-size: 25px;
+    opacity: 1;
+    text-align: center;
+}
+
+.MinProfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Cover {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.Coverbox {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Nameandimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.Profileimage {
+    height: 150px;
+    width: 150px;
+    background: url("https://via.placeholder.com/62x62") center/cover no-repeat;
+    border-radius: 50%;
+}
+
+.Nameandantal {
+    text-align: center;
+    color: white;
+}
+
+.Firstname {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.Antalani {
+    font-size: 18px;
+}
+
+.Tal {
+    font-size: 20px;
+}
+
+.Dinedyr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DineKLedyr {
+    color: #2E2A75;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.Katteblock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Katteimage {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.Navn {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.Alderblock,
+.Raceblock,
+.Koenogvaegt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.Alder,
+.Race,
+.KN,
+.VGt {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+@media (max-width: 600px) {
+    .MinProfilButton {
+        display: none;
+    }
+}
